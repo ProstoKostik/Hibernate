@@ -9,7 +9,7 @@ import java.util.Collection;
 
 @Entity
 @Table(name = "ORDERS")
-public class Orders implements Serializable {
+public class Order implements Serializable {
 
     @Id
     @GeneratedValue
@@ -26,7 +26,7 @@ public class Orders implements Serializable {
     @JoinColumn (name="SHIPPING_ADDRESS")
     private ShippingAddress shippingAddress;
 
-    @OneToMany (mappedBy="orders")
+    @OneToMany (mappedBy="order")
     private Collection<Item> items;
 
     public void setShippingAddress(ShippingAddress shippingAddress) {

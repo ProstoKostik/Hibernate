@@ -15,12 +15,12 @@ public class Item implements Serializable {
     private int id;
 
     @Column(name = "QTY")
-    private int qty;
+    private int quantity;
 
     @Column(name = "ORDER_ID")
     @Type(type = "java.lang.Integer")
     @JoinColumn (name="ORDERS")
-    private Orders orders;
+    private Order order;
 
     @Column(name = "PRODUCT_ID")
     @Type(type = "java.lang.Integer")
@@ -35,28 +35,28 @@ public class Item implements Serializable {
         return product;
     }
 
-    public void setOrders(Orders orders) {
-        this.orders = orders;
+    public void setOrder(Order order) {
+        this.order = order;
     }
 
-    public Orders getOrders() {
+    public Order getOrder() {
 
-        return orders;
+        return order;
     }
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public void setQty(int qty) {
-        this.qty = qty;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public int getId() {
         return id;
     }
 
-    public int getQty() {
-        return qty;
+    public int getQuantity() {
+        return quantity;
     }
 }

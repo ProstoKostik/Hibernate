@@ -20,13 +20,13 @@ public class Customer implements Serializable {
     private String surname;
 
     @OneToMany (mappedBy="customer")
-    private Collection<Orders> orders;
+    private Collection<Order> orders;
 
-    public void setOrders(Collection<Orders> orders) {
+    public void setOrders(Collection<Order> orders) {
         this.orders = orders;
     }
 
-    public Collection<Orders> getOrders() {
+    public Collection<Order> getOrders() {
         return orders;
     }
 

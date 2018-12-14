@@ -20,13 +20,13 @@ public class ShippingAddress implements Serializable {
     private String street;
 
     @OneToMany (mappedBy="shippingAddress")
-    private Collection<Orders> orders;
+    private Collection<Order> orders;
 
-    public void setOrders(Collection<Orders> orders) {
+    public void setOrders(Collection<Order> orders) {
         this.orders = orders;
     }
 
-    public Collection<Orders> getOrders() {
+    public Collection<Order> getOrders() {
 
         return orders;
     }
