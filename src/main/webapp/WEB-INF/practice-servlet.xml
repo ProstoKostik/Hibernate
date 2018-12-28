@@ -10,9 +10,9 @@
            http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
 ">
 
-    <context:component-scan base-package = "ru.sbrf.sandbox.practice.entities" />
+    <context:component-scan base-package="ru.sbrf.sandbox.practice.entities"/>
 
-    <jpa:repositories base-package="ru.sbrf.sandbox.practice.repositories" />
+    <jpa:repositories base-package="ru.sbrf.sandbox.practice.repositories"/>
 
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
         <property name="persistenceUnitName" value="PracticePU"/>
@@ -26,6 +26,12 @@
 
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
-    <bean class="ru.sbrf.sandbox.practice.DaoService" />
+    <bean class="ru.sbrf.sandbox.practice.DaoService"/>
+
+    <bean class="ru.sbrf.sandbox.practice.service.implement.CategoryServiceImplement"/>
+
+    <bean class="ru.sbrf.sandbox.practice.entities.Category">
+        <property name="name" value="anana"/>
+    </bean>
 
 </beans>
